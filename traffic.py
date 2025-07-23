@@ -297,4 +297,3 @@ if __name__ == "__main__":
     # Create and run a sample simulation
     intersection = create_sample_intersection()
     intersection.simulate(duration=120)  # Run for 2 minutes
-
