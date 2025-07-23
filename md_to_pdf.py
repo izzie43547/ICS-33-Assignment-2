@@ -12,7 +12,9 @@ def convert_md_to_pdf(md_file, pdf_file):
     
     # Get styles
     styles = getSampleStyleSheet()
-    styles.add(ParagraphStyle(name='Code', fontName='Courier', fontSize=10, leading=12))
+    # Only add the style if it doesn't already exist
+    if 'Code' not in styles:
+        styles.add(ParagraphStyle(name='Code', fontName='Courier', fontSize=10, leading=12))
     
     # Read markdown content
     with open(md_file, 'r', encoding='utf-8') as f:
