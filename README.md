@@ -45,7 +45,6 @@ Modify the `create_sample_intersection()` function in `traffic.py` to customize:
 
 Example configuration:
 ```python
-# In traffic.py
 def create_sample_intersection():
     # North-South direction
     ns_phase = SignalPhase(green_time=35, yellow_time=4)  # 35s green, 4s yellow
@@ -74,7 +73,7 @@ The simulation outputs to both console and `simulation.log` with timestamps:
 Run all unit tests:
 
 ```bash
-python -m unittest test_traffic.py
+python -m unittest test_traffic.py -v
 ```
 
 Test coverage includes:
